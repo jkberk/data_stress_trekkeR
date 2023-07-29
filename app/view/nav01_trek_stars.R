@@ -1,10 +1,9 @@
 # app/view/nav01_trek_stars.R
 
 box::use(
-  dplyr[...],
   shiny[...],
-  bslib[...],
-  DT[...]
+  bslib[layout_sidebar, sidebar],
+  DT[dataTableOutput],
 )
 
 box::use(

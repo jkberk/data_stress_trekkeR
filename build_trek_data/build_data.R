@@ -232,14 +232,14 @@ df_stapi_flat <- df_chr_base |>
   left_join(df_chr_relations, by = "uid", relationship = "many-to-many") |>
   left_join(df_chr_species, by = "uid", relationship = "many-to-many") |> 
   left_join(df_chr_titles, by = "uid", relationship = "many-to-many") |> 
-
+  
   left_join(df_spc_species, by = c("characterSpecies.name" = "name"), relationship = "many-to-many") 
 
 
 
 # ~ save flat dataframe ---------------------------------------------------
 
-# readr::write_rds(df_stapi_flat, "./build_trek_data/data/df_stapi_flat.rds")
+readr::write_rds(df_stapi_flat, "./build_trek_data/data/df_stapi_flat.rds", "gz")
 
 
 # 
